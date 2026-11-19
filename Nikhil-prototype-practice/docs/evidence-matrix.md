@@ -1,0 +1,20 @@
+# Evidence matrix
+
+G1 means the supplied interview guide; page numbers are one-based PDF pages. P01–P08 identify filled note records anonymously, as indexed in `research-synthesis.md`. Every interview entry below is a **paraphrase of written notes**, not a verbatim quote. The local-only source audit outside this repository maps source codes to exact files. No participant contact information is included.
+
+| Pain point / user need | Evidence (anonymous verbatim or clearly marked paraphrase) | Source and location | Design decision | Screen/feature | Trade-off |
+| --- | --- | --- | --- | --- | --- |
+| Mandatory chat feels excessive | Paraphrase: P03 dislikes chatbot setup; P05 describes too much information; P07 prefers clicking through | G1 pp. 15–16, 23–25, 34–35 | Replace required chat with a direct visual path | Workspace, Plans, Review | Less personalization unless help is discoverable |
+| Some people value guidance | Paraphrase: P04 likes agent guidance and wants questions answered; P08 requests side help | G1 pp. 19–20, 38–39 | Preserve support as a contextual, optional scripted guide | Searchable help drawer | Deterministic answers cannot cover every free-form question |
+| Recommendation hides alternatives | Paraphrase: P01 wants all plans; P06 wants to browse alternatives | G1 pp. 7, 29 | Full catalog, transparent selection, recommendation reasons | Plans and all-options dialog | More choice can increase comparison time |
+| Value above a free baseline is unclear | Paraphrase: P06 does not see enough difference from their current free option | G1 p. 29 | Explain baseline limits and managed-team value | Free-baseline disclosure | Generic baseline is illustrative, not detected from an account |
+| Missing prices and usage explanation | Paraphrase: P02 asks about usage; P05 flags no price | G1 pp. 10, 25 | Show source-dated prices, seat estimate, usage explanation | Plan cards, estimate, help | Snapshot must be refreshed; task usage remains variable |
+| Plan rationale is opaque | Paraphrase: P08 wants chosen answers linked to the recommendation | G1 p. 39 | Show reasons based on team and access selections | Why this plan panel | Rules are deliberately simple and unvalidated |
+| Changing one choice requires restarting | Paraphrase: P05 wants selective edits; P07 cannot change chat answers | G1 pp. 23, 25, 34 | Preserve answers and revoke only stale confirmation | Back, progress navigation, Edit controls | Rechecking after a material edit adds a necessary step |
+| Unfamiliar enterprise terms | Paraphrase: P03 is unfamiliar with Enterprise and Codespaces; P04 wants explanations | G1 pp. 15, 18–20 | Ask plain-language questions; defer optional access settings | Workspace and help | Experts may need the advanced disclosure |
+| Organization prerequisite is unclear | Paraphrase: P02 is unsure whether an organization must exist first | G1 p. 10 | Existing/new organization choice with a definition | Workspace | Fictional creation does not validate actual account provisioning |
+| Fast setup can obscure company permissions | Paraphrase: P04 wants clarity about information and actions allowed | G1 p. 19 | Keep an explicit access review before confirmation | Review access | Slower than skipping permissions; required controls remain |
+| Team members may not be allowed to buy | Hypothesis based on differing team roles and company-access concerns | G1 p. 19; B1 requirement, not an observed request | Separate request preparation from granted access | Approval-pending path | Admin completion is outside the mockup |
+| Users need a clear finish | Project requirement: reduce setup friction and reach useful coding work | S1 p. 1; G1 p. 24 orientation notes | Guided sample task with review and completion | First task, diff, explanation, demo commit | A scripted example cannot establish real agent reliability |
+
+See `design-rationale.md` for alternative concepts and `testing-plan.md` for the tasks that could validate or reject these decisions. No new participant tests are claimed.
